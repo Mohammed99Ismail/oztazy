@@ -1,0 +1,59 @@
+<div class="main-body">
+
+    <div class="btn-course">
+        <button class="ui secondary button" style="margin-bottom: 1rem;" (click)="newCourse()">
+          + New Course
+        </button>
+      </div>
+
+    <div class="courses">
+    
+        <div class="ui four column grid">
+
+          <div class="row">
+
+            <div class="column" *ngFor="let c of course">
+      
+              <div class="ui card">
+                <div class="image">
+                  <img [src]="createImg(photoUrl,c.photoPath)" style="width: 100;height: 100%;">
+                </div>
+                <div class="content">
+      
+                  <div class="head" style="display: flex;">
+                    <h5 class="header" style="margin: auto auto;">{{c.title}}</h5>
+                    <h5 class="header" style="margin: auto auto;">{{c.type}}</h5>
+                  </div>
+      
+                  <div class="meta">
+                    <span class="date">{{c.language}}</span>
+                  </div>
+                  <div class="meta">
+                    <span class="date">{{c.level}}</span>
+                  </div>
+                  <div class="description">
+                   {{c.description}}
+                  </div>
+                </div>
+                <div class="extra content">
+                  {{name}}
+                </div>
+                <div class="extra content">
+                  <div class="upload-videos">
+                    <input #videoFile type="file" (change)="uploadVideos(c.id)" required>
+                  </div>
+                  <span class="upload" style="color: black;font-size: 18x; padding-top: 1rem;">
+                    {{progress}} %
+                  </span>
+                </div>
+              </div>
+              
+            </div>
+
+          </div>
+
+        </div>
+    
+    
+      </div>
+</div>

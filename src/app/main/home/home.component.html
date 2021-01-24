@@ -1,0 +1,27 @@
+<div class="main-body">
+    <!-- <span class="back-arrow"> <i (click)="return()" class="fa fa-long-arrow-left"></i> </span> -->
+    <div class="body--header">
+        <h3>Sign up</h3>
+        <p>If You Don’t Have Account  Seltect Your Type  Jouin<br/> Us To Start  Your Personal Account</p>     
+    </div>
+    <div class="body--cards">
+        <div class="ui two column grid">
+            <div class="column center">
+                <div #student class="card-img-container" data-type="student" (click)="getType(student)">
+                    <img src="../../assets/img/Outline.png">
+                </div>
+                <span class="card-img-title">Student</span>
+            </div>
+            <div class="column center">
+                <div #teacher class="card-img-container" data-type="teacher" (click)="getType(teacher)">
+                    <img src="../../assets/img/tutor.png">
+                </div>
+                <span class="card-img-title">Tutor</span>
+            </div>
+          </div>
+    </div>
+    <div class="body--footer">
+        <p>Already Have Account?  <span (click)="login()" style="cursor: pointer;">Login</span></p>
+    </div>
+    
+</div>

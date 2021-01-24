@@ -1,0 +1,52 @@
+.content{
+    margin: 2rem;
+    display: flex;
+    width: 100%;
+ }
+ .img-desc{
+     max-width: 62rem;
+     margin: 1rem;
+ }
+ .image{
+     max-width: 60rem;
+     max-width: 40rem;
+ }
+ .image img{
+     border:6px solid gray;
+     border-radius: 6px;
+ }
+ .body{
+     width: 100%;
+     height: 100%;
+     margin-top: 2rem;
+ }
+ .header{
+     display: flex;
+     width: 100%;
+     margin-bottom: 6rem;
+ }
+ .price{
+     margin-left: auto;
+ }
+ .videos{
+     margin: 1rem;
+     margin-left: auto;
+     max-width: 25rem;
+ }
+ .video{
+     display: flex;
+     width: 100%;
+     margin-bottom: 1rem;
+ }
+ .title{
+     margin: 0 auto;
+ }
+ .videos video{
+     display: block;
+     width: 60%;
+     border:6px solid gray;
+     border-radius: 6px;
+ }
+ .videos video:last-child{
+     margin-bottom: 0;
+ }

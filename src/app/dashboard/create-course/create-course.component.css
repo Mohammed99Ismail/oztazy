@@ -1,0 +1,31 @@
+.main-body{
+    max-width: 610px;
+    border: 1px solid #C1C1C1;
+    border-radius: 10px;
+    margin-top: 70px;
+    padding: 50px 30px;
+    margin-left: 14rem;    
+}
+
+.body--cards{
+    margin-top: 50px;
+}
+.secondary{
+    width: 250px;
+    height: 35px;
+    border-radius: 15spx;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #2A2A2A;
+    color:white;
+    border-radius: 5px;
+}
+
+.col{
+    height: 32rem;
+}

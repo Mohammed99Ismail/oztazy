@@ -1,0 +1,51 @@
+<div class="main-body">
+    <span class="back-arrow">
+         <i style="cursor: pointer;" (click)="return()" class="fa fa-long-arrow-left"></i> 
+        </span>
+    <div class="body--header">
+        <h3>Create Account</h3>
+        <p>DON'T HAVE ONE<br/>LET'S CREATE IT</p>     
+    </div>
+    <div class="body--cards">
+            <form class="ui form" #loginForm="ngForm" (ngSubmit)="onSubmit()">
+                <div class="ui two column grid">
+                    <div class="column">
+                        <label>Name</label>
+                        <input #name="ngModel" type="text"
+                             placeholder="Your Name" name="name" ngModel required>
+                             <div *ngIf="name.invalid && name.touched" style="color: red;">
+                                This field is required.
+                              </div>
+                    </div>
+                    <div class="column">
+                        <label>Password</label>
+                        <input #password="ngModel" type="password" placeholder="password" name="password"
+                         ngModel required>
+                        <div *ngIf="password.invalid && password.touched" style="color: red;">
+                            This field is required.
+                          </div>
+                    </div>
+                </div>
+                
+                <div class="ui grid">
+                    <div class="eight wide column">
+                        <button [disabled]='!loginForm.valid' type="submit" class="ui secondary button">
+                            Sign Up</button>
+                    </div>
+                        <div class="four wide column sign-btn-label">
+                            <label>OR Sign Up With</label>
+                        </div>
+                        <div class="sign-btn-label four wide column">
+                            <span><i class="fa fa-twitter"></i></span>
+                            <span><i class="fa fa-facebook-f"></i></span>
+                            <span><i class="fa fa-google"></i></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="body--footer">
+                <p style="cursor: pointer;" (click)="forgetPassword()">Forget Password ?</p>
+            </div>
+    
+</div>

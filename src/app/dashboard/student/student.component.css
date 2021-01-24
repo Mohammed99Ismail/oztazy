@@ -1,0 +1,170 @@
+/* main content  */
+.content{
+    position: relative;
+    width: 85vw;
+}
+.title{
+    height: 15vh;
+}
+.title h1{
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+/* courses */
+.main-content{
+    display: flex;
+    position: relative;
+}
+.upcoming-courses{
+    margin:15px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: var(--white-gray);
+    padding: 24px 10px;
+    width: 23vw;
+    max-height: 11vw;
+}
+.middle{
+    max-width:90px;
+}
+/* .ui.items>.item>.image+.content {
+    padding-left: 0;
+} */
+.image{
+    padding: 10px 12px;
+}
+.middle h6{
+    margin:0;
+}
+.fa-user-circle{
+    padding: 0 10px;
+}
+.item{
+    text-align: center;
+    justify-content: center;
+}
+.image, .middle h6, .middle p{
+    color: var(--dark-gray);
+}
+
+/* enrolled courses */
+
+.content-header{
+  position: absolute;
+  top:-40px;
+  font-size: 70px;
+  left:25px;
+}
+ .calender{
+  position: absolute;
+  margin-left: 350px;  
+  bottom: 580px;
+}
+.demo-app,.demo-app-main{
+  width: 55vw;
+  position: absolute;
+} 
+
+/**/
+
+ h2 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0 0 0 1.5em;
+  }
+  
+  li {
+    margin: 1.5em 0;
+    padding: 0;
+  } 
+  
+  b { /* used for event dates/times */
+    margin-right: 3px;
+  }
+  
+  .demo-app {
+    display: flex;
+    min-height: 100%;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+  
+  .demo-app-sidebar {
+    width: 300px;
+    line-height: 1.5;
+    background: #eaf9ff;
+    border-right: 1px solid #d3e2e8;
+  }
+  
+  .demo-app-sidebar-section {
+    padding: 2em;
+  }
+  
+  .demo-app-main {
+    flex-grow: 1;
+    padding: 3em;
+  }
+  
+  .fc { /* the calendar root */
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* suggested course */
+
+.suggested-title{
+  margin: 2rem;
+  margin-left: 2rem;
+}
+
+.suggested--cards-2{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.underImg{
+  margin-top: 10px;
+}
+.underImg > div{
+color: #929292;
+}
+
+.card-img-container-2{
+  position: relative;
+  max-width: 13rem;
+  max-height: 13rem;
+  background-color: #EFEFEF;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 10px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-img-container-2 button{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+.underImg{
+  display: flex;
+}
+.duration{
+  margin-left: auto;
+}
+.discreption{
+  margin-top: 10px;
+}
+
+.column{
+  min-width: 12rem;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+  

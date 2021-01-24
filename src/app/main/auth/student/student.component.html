@@ -1,0 +1,136 @@
+<div class="main-body">
+
+    <span class="back-arrow">
+         <i style="cursor: pointer;" (click)="return()" class="fa fa-long-arrow-left"></i> 
+        </span>
+    <div class="body--header">
+        <h3>Create Account</h3>
+        <p>DON'T HAVE ONE<br/>LET'S CREATE IT</p>     
+    </div>
+    <div class="body--cards">
+            <form class="ui form" #registerForm="ngForm" (ngSubmit)="onSubmit()">
+                <div class="ui one column grid">
+                    <div class="column">
+                        <label>Name</label>
+                        <div>
+                            <input #name="ngModel" type="text" name="first-name"
+                             placeholder="Your Name" name="name" ngModel required>
+                             <div *ngIf="name.invalid && name.touched" style="color: red;">
+                                This field is required.
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui one column grid">
+                    <div class="column">
+                        <label>Email Name</label>
+                        <input #email="ngModel" type="text" placeholder="email" name="email"
+                         ngModel required email>
+                        <div *ngIf="email.invalid && email.touched" style="color: red;">
+                            This field is required or Email not valid.
+                          </div>
+                    </div>
+                </div>
+                <div class="ui two column grid">
+                    <div class="column">
+                        <label>Phone</label>
+                        <input #phone="ngModel" type="text" placeholder="phone" name="phone"
+                         ngModel required>
+                        <div *ngIf="phone.invalid && phone.touched" style="color: red;">
+                            This field is required.
+                          </div>
+                    </div>
+                    <div class="column">
+                        <label>Country</label>
+                        <select #country="ngModel" class="ui fluid dropdown" name="country" ngModel
+                         required required>
+                            <option *ngFor="let c of dataCountry" [value]="c">{{c}}</option>
+                        </select>
+                        <div *ngIf="country.invalid && country.touched" style="color: red;">
+                            This field is required.
+                          </div>
+                    </div>
+                </div>
+                <div class="ui one column grid">
+                    <div class="inline fields">
+                        <div class="field">
+                          <div class="ui radio checkbox">
+                            <input #checkbox="ngModel" type="radio" value="male" name="checkbox" ngModel required>
+                            <label>Male</label>
+                          </div>
+                        </div>
+                        <div class="field">
+                          <div class="ui radio checkbox">
+                            <input #checkbox="ngModel" type="radio" name="checkbox" value="female" ngModel>
+                            <label>Female</label>
+                          </div>
+                        </div>
+                        <div class="field">
+                          <div class="ui radio checkbox">
+                            <input #checkbox="ngModel" type="radio" name="checkbox" value="prefer not to add" ngModel>
+                            <label>Prefer not to add</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div *ngIf="checkbox.invalid" style="color: red;"> 
+                      Gender required. 
+                    </div> 
+                <div class="ui two column grid">
+                    <div class="column">
+                        <label>Password</label>
+                        <input #password="ngModel" type="password" placeholder="password" name="password"
+                         ngModel required minlength="6">
+                        <div *ngIf="password.invalid && password.touched || password.errors?.minlength" style="color: red;">
+                            This field is required or password should be more than 6 letters.
+                          </div>
+                    </div>
+                    <div class="column">
+                        <label>Confirm Password</label>
+                        <input #confirmpassword type="password" placeholder="confirm password" name="confirmpassword"
+                         ngModel required minlength="6" (ngModelChange)="isPasswordMatch($event)">
+                        <div *ngIf="confirmpassword.invalid && confirmpassword.touched || confirmpassword.errors?.minlength" 
+                        style="color: red;">
+                            This field is required or password should be more than 6 letters.
+                          </div>
+                          <div style="color: red;" *ngIf="isMatch">Password Doesn't match</div>  
+
+                    </div>
+                </div>
+                <div class="ui two column grid">
+                    <div class="column">
+                        <div class="ui checkbox">
+                            <input #policy="ngModel" type="checkbox" value='true' name="policy" ngModel required>
+                            <div *ngIf="policy.invalid && policy.touched" style="color: red;">
+                                This field is required.
+                              </div>
+                            <label>I agree to the Terms and Conditions</label>
+                        </div>
+                        <div *ngIf="policy.invalid" style="color: red;"> 
+                            You should agree with our policy first. 
+                          </div> 
+                    </div>
+                </div>
+                <div class="ui grid">
+                    <div class="eight wide column">
+                        <button [disabled]='!registerForm.valid' style="cursor: pointer;"
+                         type="submit" class="ui secondary button">
+                            Sign Up</button>
+                    </div>
+                        <div class="four wide column sign-btn-label">
+                            <label>OR Sign Up With</label>
+                        </div>
+                        <div class="sign-btn-label four wide column">
+                            <span><i class="fa fa-twitter"></i></span>
+                            <span><i class="fa fa-facebook-f"></i></span>
+                            <span><i class="fa fa-google"></i></span>
+                        </div>
+                </div>
+            </form>
+        </div>
+    <div class="body--footer">
+        <p>Already Have Account?  <span (click)="login()" style="cursor: pointer;">Login</span></p>
+    </div>
+</div>
+
+    

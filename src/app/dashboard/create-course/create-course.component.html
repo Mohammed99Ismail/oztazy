@@ -1,0 +1,126 @@
+<div class="main-body">
+          
+    <div class="body--cards">
+
+            <form class="ui form" *ngIf="uploadVideos">
+                <div class="ui one column grid">
+                    <div class="column">
+                    <label style="display: block;">Upload Video</label>
+                    <input #videoFile type="file" (change)="video()" required>
+                    
+                    </div>
+                </div>
+                
+                <div class="col"></div>
+
+                <div class="ui two column grid">
+                    <div class="column">
+                        <button (click)="back()" class="ui secondary button btn">
+                            <i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i>
+                            Back</button>
+                    </div>
+                    <div class="column">
+                        <button class="ui secondary button btn"
+                         (click)="done()">Done</button>
+                    </div>
+                </div>
+            </form>
+
+            <form class="ui form" *ngIf="!uploadVideos" #courseForm="ngForm" (ngSubmit)="onSubmit()">
+
+                <div class="ui one column grid">
+                    <div class="column">
+                      <label style="display: block;">Upload Image</label>
+                      <input type="file" #photoFile (change)="photo()" required>
+                      
+                    </div>
+                </div>
+
+                <div class="ui two column grid">
+
+                  <div class="column">
+                    <label>Course Title</label>
+                    <input #name="ngModel" type="text" name="title" placeholder="title" ngModel required>
+                    <div *ngIf="name.invalid && name.touched" style="color: red;">
+                      This field is required. 
+                    </div>
+                  </div>
+
+                  <div class="column">
+                    <label>Course Type</label>
+                    <select #type="ngModel" class="ui fluid dropdown " name="type" ngModel required>
+                        <option *ngFor="let t of dataTypes" [value]="t">{{t}}</option>
+                    </select>
+                    <div *ngIf="type.invalid && type.touched" style="color: red;">
+                      This field is required.
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="ui two column grid">
+
+                  <div class="column">
+                    <label>Language</label>
+                    <select #lang="ngModel" class="ui fluid dropdown " name="language" ngModel required>
+                        <option *ngFor="let l of dataLanguages" [value]="l">{{l}}</option>
+                    </select>
+                    <div *ngIf="lang.invalid && lang.touched" style="color: red;">
+                      This field is required.
+                    </div>
+                  </div>
+
+                  <div class="column">
+                    <label>Level Of Student</label>
+                    <select #lev="ngModel" class="ui fluid dropdown " name="level" ngModel required>
+                        <option *ngFor="let l of dataLevels" [value]="l">{{l}}</option>
+                    </select>
+                    <div *ngIf="lev.invalid && lev.touched" style="color: red;">
+                      This field is required.
+                    </div>
+                  </div>
+
+                </div>
+                
+                <div class="ui one column grid">
+                  <div class="column">
+                      <label>Text</label>
+                      <textarea #desc="ngModel" rows="2" name="description" ngModel required></textarea>
+                      <div *ngIf="desc.invalid && desc.touched" style="color: red;">
+                        This field is required.
+                      </div>
+                  </div>
+                </div>
+                
+                <div class="ui one column grid">
+                  <div class="column">
+                    <label style="display: block;">Duration</label>
+                    <input #dur="ngModel" type="text" name="duration" placeholder="duration" ngModel required>
+                    <div *ngIf="dur.invalid && dur.touched" style="color: red;">
+                      This field is required.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ui two column grid">
+
+                  <div class="column">
+                      <label>Price $</label>
+                      <input #price="ngModel" type="text" name="price" ngModel required>
+                      <div *ngIf="price.invalid && price.touched" style="color: red;">
+                        This field is required.
+                      </div>
+                  </div>
+                  
+                  <div class="column">
+                    <label>Next</label>
+                    <button class="ui secondary button" [disabled]='!courseForm.valid'
+                     type="submit" (click)="next()">Next>></button>
+                  </div>
+
+                </div>
+                
+            </form>
+        </div>
+    
+</div>

@@ -1,0 +1,31 @@
+<div class="content">
+
+    <div class="img-desc">
+      <div class="image">
+        <img [src]="getImage()"
+        style="width: 100%;height: 100%;">
+      </div>
+      <div class="body">
+        <div class="header">
+          <h3 class="name"><strong>Instructor:</strong> {{course.instructor}}</h3>
+          <h3 class="price">{{course.price}} $</h3>
+        </div>
+        <p class="description">
+          <strong>About:</strong> {{course.description}}
+        </p>
+      </div>
+    </div>
+
+    <div class="videos">
+
+      <div class="video" *ngFor="let v of videos; let i=index">
+        <h5 class="title">{{i+1}}- {{v.videoName}}</h5>
+        <video controls preload="none"
+        [poster]="getImage()">
+        <source [src]="getVieo(v.path)" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+
+  </div>

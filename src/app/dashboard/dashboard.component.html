@@ -1,0 +1,46 @@
+<header>
+    <div class="top-banner">
+        <div class="top-banner--container">
+            <div class="left-sides">
+                <span class="left-sides--element">Oztazy</span>
+                <span class="left-sides--element"><i class="fa fa-align-left"></i></span>
+            </div>
+            <div class="right-sides">
+                <span class="right-sides--elements">
+                    <i class="fa fa-bell"></i>
+                </span>
+                <span class="right-sides--elements">
+                    <i class="fa fa-user-circle"></i>
+                    {{name}}
+                    <i (click)="toggle()" class="fa fa-angle-down" style="cursor: pointer;"></i>
+                </span>
+                <div (click)="logout()" class="toggle" [ngStyle]="{'display' : isToggle ? 'none' : 'block' }">
+                    <p>Logout</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="main">
+    <div class="banner">
+        <div class="section">
+            <div class="ui transparent icon input">
+                <input type="text" placeholder="Search...">
+                <i class="search icon"></i>
+              </div>
+        </div>
+        <div class="section" style="cursor: pointer;" (click)="dashboard()">
+            <i class="fa fa-home"></i><span>Home</span><i class="fa fa-chevron-right"></i>
+        </div>
+        <div class="section" style="cursor: pointer;" (click)="courses()">
+            <i class="fa fa-book"></i><span>My Courses</span><i class="fa fa-chevron-right"></i>
+        </div>
+        <div class="section">
+            <i class="fa fa-comment"></i>Messages<i class="fa fa-chevron-right"></i>
+        </div>
+        <div class="section">
+            <i class="fa fa-file"></i>Tasks<i class="fa fa-chevron-right"></i>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>

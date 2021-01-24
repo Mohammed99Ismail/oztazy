@@ -1,0 +1,19 @@
+<p-table [value]="num">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Course Name</th>
+            <th>Category</th>
+            <th>Instructor</th>
+            <th>Description</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+        <tr *ngFor="let c of courses">
+            <td>{{c.course.title}}</td>
+            <td>{{c.course.type}}</td>
+            <td>{{c.course.instructor}}</td>
+            <td>{{c.course.description}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+

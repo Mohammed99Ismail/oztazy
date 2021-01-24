@@ -1,0 +1,57 @@
+.content{
+    position: relative;
+    width: 100%;
+}
+.title{
+    height: 14vh;
+}
+.title h1{
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: 30px;
+}
+/* courses */
+.main-content{
+    display: flex;
+    max-height: 30rem;
+}
+
+.body{
+margin: 0 2rem;
+}
+.courses-content{
+max-width: 43rem;
+width: 40rem;
+max-height: 30rem;
+}
+
+
+/* suggested course */
+
+.suggested--cards-2{
+    max-width: 38rem;
+}
+.suggested--cards-3{
+    max-width: 38rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+.suggested--cards-3:last-child{
+    max-width: 38rem;
+    margin-top: 2rem;
+    margin-right: 0;
+}
+
+.calender{
+    max-height: 30rem;
+    position: relative;
+    max-width: 43rem;
+    width: 43rem;
+    max-height: 43rem;
+    height: 43rem;
+    margin-left: 2rem;
+}
+.calender-body{
+    position: absolute;
+    margin-bottom:2rem ;
+}
